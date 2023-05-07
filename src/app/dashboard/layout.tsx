@@ -21,9 +21,7 @@ export default function Layout({
                 <Link href="/dashboard/settings">Settings</Link>
             </nav>
         </div>
-        <main>
-            {children}
-        </main>
+        {children}
     </>
   )
 }
