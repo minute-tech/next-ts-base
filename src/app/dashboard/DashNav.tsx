@@ -24,7 +24,7 @@ export default function DashNav() {
     return (
         <nav>
             {
-                navLinks.map((link) => {
+                navLinks.map((link, l) => {
                     const activeStyle = (
                         (pathname === link.href) || (pathname.startsWith(link.href) && link.href !== root)
                     ) ? 
@@ -32,7 +32,7 @@ export default function DashNav() {
                     : 
                     {fontSize: "18px", margin: "0 5px"};
                     return (
-                        <span style={activeStyle}>
+                        <span key={l} style={activeStyle}>
                             <Link href={link.href}>{link.name}</Link>
                         </span>
                     )
