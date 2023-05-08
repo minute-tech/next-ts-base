@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import DashNav from './DashNav'
 
 export const metadata = {
   title: 'Dashboard',
@@ -11,16 +11,7 @@ export default function Layout({
 }) {
   return (
     <>
-        <div>
-            <nav>
-                &nbsp;&nbsp;
-                <Link href="/dashboard/">Dashboard</Link>
-                &nbsp;&nbsp;
-                <Link href="/dashboard/profile">Profile</Link>
-                &nbsp;&nbsp;
-                <Link href="/dashboard/settings">Settings</Link>
-            </nav>
-        </div>
+        <DashNav />
         {children}
     </>
   )
