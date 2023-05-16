@@ -1,6 +1,7 @@
-import Footer from './Footer'
 import './globals.css'
 import Header from './Header'
+import Footer from './Footer'
+import StyledComponentsRegistry from '../../lib/registry'
 
 export const metadata = {
   title: 'Next TS Base',
@@ -15,13 +16,13 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <Header />
-                <hr/>
-                <div>
-                    {children}
-                </div>
-                <hr/>
-                <Footer />
+                <StyledComponentsRegistry>
+                    <Header />
+                    <div>
+                        {children}
+                    </div>
+                    <Footer />
+                </StyledComponentsRegistry>
             </body>
         </html>
     )
