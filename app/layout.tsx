@@ -1,6 +1,6 @@
-import Footer from './Footer'
-import './globals.css'
-import Header from './Header'
+import './styles/globals.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export const metadata = {
   title: 'Next TS Base',
