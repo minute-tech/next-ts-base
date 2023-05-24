@@ -1,6 +1,7 @@
 import './styles/globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Provider from "./components/Provider"
 
 export const metadata = {
   title: 'Next TS Base',
@@ -15,13 +16,15 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <Header />
-                <hr/>
-                <div>
-                    {children}
-                </div>
-                <hr/>
-                <Footer />
+                <Provider>
+                    <Header />
+                    <hr/>
+                    <div>
+                        {children}
+                    </div>
+                    <hr/>
+                    <Footer />
+                </Provider>
             </body>
         </html>
     )

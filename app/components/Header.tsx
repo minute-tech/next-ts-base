@@ -3,6 +3,7 @@
 import Link from 'next/link';
 // import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import SignInButton from './SignInButton';
 
 export default function Header() {
 //   const [burgerExpanded, setBurgerExpanded] = useState(false);
@@ -48,6 +49,7 @@ export default function Header() {
                             )
                         })
                     }
+                    <SignInButton />
                 </div>
             </nav>
         </header>
