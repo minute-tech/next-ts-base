@@ -1,8 +1,7 @@
 "use client"
 
-
-import { LogIn, LogOut } from "lucide-react";
-import { useSession, signIn, signOut } from "next-auth/react"
+import { LogOut } from "lucide-react";
+import { useSession, signOut } from "next-auth/react"
 import Image from "next/image"
 import Link from "next/link"
 export { LogOut } from "lucide-react";
@@ -14,7 +13,7 @@ const SignInButton = () => {
         return (
             <div>
                 <Image
-                    src={session?.user?.image ?? "@/assets/images/user.png"} 
+                    src={session?.user?.image ?? "/assets/images/misc/user.png"} 
                     width={32} 
                     height={32}
                     alt={`${session?.user?.name ?? "user"} avatar`}
@@ -25,10 +24,9 @@ const SignInButton = () => {
         )
     } else {
         return (
-            <button onClick={() => signIn()}>
-                <LogIn color="green" size={16} />&nbsp;
+            <Link href="/sign-in">
                 Sign In
-            </button>
+            </Link>
         )
     }
 }
