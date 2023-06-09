@@ -16,3 +16,13 @@ export const Hr = styled.div`
     width: ${(props: any) => props.width ? props.width : "100%"};
     float: ${(props: any) => props.selected ? props.selected : "none"};
 `;
+
+export const Wrapper = styled.div`
+    margin: 0 auto;
+    width: 75%;
+    padding: 3% 0;
+
+    @media (max-width: 992px) {
+        width: 85%;
+    }
+`;

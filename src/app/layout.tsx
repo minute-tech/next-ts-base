@@ -2,6 +2,7 @@ import './globals.css'
 import Header from './Header'
 import Footer from './Footer'
 import StyledComponentsRegistry from '../../lib/registry'
+import { Wrapper } from "@/styles/misc"
 
 export const metadata = {
   title: 'Next TS Base',
@@ -18,9 +19,9 @@ export default function RootLayout({
             <body>
                 <StyledComponentsRegistry>
                     <Header />
-                    <div>
+                    <Wrapper>
                         {children}
-                    </div>
+                    </Wrapper>
                     <Footer />
                 </StyledComponentsRegistry>
             </body>
