@@ -19,7 +19,7 @@ export default function RootLayout({
             <body>
                 <StyledComponentsRegistry>
                     <Header />
-                    <Wrapper>
+                    <Wrapper color="lightblue">
                         {children}
                     </Wrapper>
                     <Footer />

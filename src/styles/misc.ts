@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
     margin: 0 auto;
     width: 75%;
     padding: 3% 0;
+    background-color: ${(props: any) => props.color ? props.color : "transparent"};
 
     @media (max-width: 992px) {
         width: 85%;
